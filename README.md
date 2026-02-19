@@ -1,67 +1,38 @@
-# marimo + pixi Starter Template
+# STAC Workshop
 
-A starter template for [marimo](https://marimo.io) notebooks using [pixi](https://github.com/prefix-dev/pixi) for dependency and project management. This template provides a modern Python development setup with best practices for notebook development.
+Clone this repo
 
-## Features
+```
+git clone https://github.com/UTAS-TerraLuma/stac-workshop.git
+# or cia clia
+gh repo clone UTAS-TerraLuma/stac-workshop
+# or use the Desktop app 🤷
 
-- 🚀 Python 3.12+ support
-- 📦 Fast dependency management with `pixi`
-- 🧪 Testing setup with pytest
-- 🎯 Code quality with Ruff (linting + formatting)
-- 👷 CI/CD with GitHub Actions
-- 📓 Interactive notebook development with marimo
-
-## Prerequisites
-
-- [pixi](https://github.com/prefix-dev/pixi) installed
-
-## Getting Started
-
-1. Clone this repository:
-
-   ```bash
-   git clone https://github.com/yourusername/marimo-pixi-starter-template
-   cd marimo-pixi-starter-template
-   ```
-
-2. Run the marimo editor:
-
-   ```bash
-   pixi run edit
-   ```
-
-## Development
-
-### Running Tests
-
-```bash
-pixi run test
+# Change into directory
+cd stac-workshop
 ```
 
-### Linting and formatting
 
-```bash
-pixi run lint
-pixi run format
+Create an environment. Pixi is the easiest, [install instructions here](https://pixi.prefix.dev/latest/installation/#__tabbed_1_2). Then run 
+
+```
+pixi install
 ```
 
-### Install pre-commit
+Alternatively via conda
 
-```bash
-pixi run pre-commit-install
+```
+conda env create -f environment.yml -n stac-workshop
+conda activate stac-workshop
 ```
 
-## Project Structure
+Run marimo
 
-```markdown
-├── .github/          # GitHub Actions workflows
-├── src/              # Source code
-│   └── app.py        # Sample marimo notebook
-├── tests/            # Test files
-├── pyproject.toml    # Project configuration
-└── pixi.lock         # Dependency lock file
 ```
+# If using pixi
+pixi run edit
 
-## License
-
-MIT
+# if using conda
+conda activate stac-workshop
+marimo edit stac_notebook.py
+```
