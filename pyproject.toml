@@ -1,0 +1,41 @@
+[project]
+description = "A workshop introduction to STAC"
+name = "stac-workshop"
+requires-python = ">=3.10"
+version = "0.1.0"
+
+[tool.pixi.workspace]
+channels = ["conda-forge"]
+platforms = ["linux-64", "win-64"]
+
+[tool.pixi.pypi-dependencies]
+stac-workshop = { path = ".", editable = true }
+
+[tool.pixi.dependencies]
+ruff = ">=0.14,<0.15"
+marimo = ">=0.18,<0.19"
+
+[tool.pixi.tasks]
+edit = "marimo edit src"
+lint = "ruff check src"
+format = "ruff format src"
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = [
+  "E", # pycodestyle
+  "F", # pyflakes
+  "I", # isort
+  "B", # flake8-bugbear
+]
+
+[tool.marimo.save]
+autosave = "after_delay"
+autosave_delay = 1000
+format_on_save = true
+
+[tool.marimo.package_management]
+manager = "pixi"
