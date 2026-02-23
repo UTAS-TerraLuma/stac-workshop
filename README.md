@@ -4,7 +4,7 @@ Clone this repo
 
 ```
 git clone https://github.com/UTAS-TerraLuma/stac-workshop.git
-# or cia clia
+# or vai the github cli
 gh repo clone UTAS-TerraLuma/stac-workshop
 # or use the Desktop app 🤷
 
